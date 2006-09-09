@@ -1,0 +1,12 @@
+# logd
+#
+# This service is started automatically by init so that the output from
+# other services can be logged.
+
+description	"service logging daemon"
+author		"Scott James Remnant <scott@ubuntu.com>"
+
+stop on shutdown
+
+respawn /sbin/logd
+console output
